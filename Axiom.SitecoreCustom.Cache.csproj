@@ -183,7 +183,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Extension\Presentation\AxiomCachingDefinition.cs" />
     <Compile Include="Pipelines\MvcRendering\ExtendCacheKeyWithVaryByPage.cs" />
     <Compile Include="Pipelines\MvcRendering\GenerateCacheKey.cs" />
