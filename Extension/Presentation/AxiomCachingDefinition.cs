@@ -13,14 +13,9 @@ namespace Axiom.SitecoreCustom.Cache.Extension.Presentation
         {
             get
             {
-                if (this.Rendering.RenderingItem.Parameters.Length > 0)
-                {
-
-                    if (this.Rendering.RenderingItem.Parameters.Contains("varybyurl=1"))
-                    {
-                        return true;
-                    }
-                }
+                if (Rendering.RenderingItem.Parameters.Length > 0 &&
+                    Rendering.RenderingItem.Parameters.Contains("varybyurl=1"))
+                    return true;
                 return false;
             }
         }
