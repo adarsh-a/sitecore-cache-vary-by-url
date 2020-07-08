@@ -184,7 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extension\Presentation\AxiomCachingDefinition.cs" />
-    <Compile Include="Pipelines\MvcRendering\ExtendCacheKeyWithVaryByPage.cs" />
     <Compile Include="Pipelines\MvcRendering\GenerateCacheKey.cs" />
     <Compile Include="Pipelines\MvcRendering\SetCacheability.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,7 +10,7 @@ namespace Axiom.SitecoreCustom.Cache.Pipelines.MvcRendering
         {
             string str = base.GenerateKey(rendering, args);
             if (!string.IsNullOrEmpty(str) && new AxiomCachingDefinition(rendering).VaryByURL)
-                str = string.Format("{0}_{1}", (object)str, System.Web.HttpContext.Current.Request.Url.AbsolutePath);
+                str = $"{str}_{System.Web.HttpContext.Current.Request.Url.AbsolutePath}_#uid:{args.Rendering.UniqueId.ToString()}";
             return str;
         }
     }
