@@ -10,7 +10,7 @@ namespace Axiom.SitecoreCustom.Cache.Pipelines.MvcRendering
         protected override bool IsCacheable(Rendering rendering, RenderRenderingArgs args)
         {
             if (base.IsCacheable(rendering, args))
-                return new AxiomCachingDefinition(rendering).VaryByPage || PageContext.Current.Item != null;
+                return new AxiomCachingDefinition(rendering).VaryByURL || PageContext.Current.Item != null;
             return false;
         }
     }

@@ -9,14 +9,14 @@ namespace Axiom.SitecoreCustom.Cache.Extension.Presentation
         {
         }
 
-        public bool VaryByPage
+        public bool VaryByURL
         {
             get
             {
                 if (this.Rendering.RenderingItem.Parameters.Length > 0)
                 {
 
-                    if (this.Rendering.RenderingItem.Parameters.Contains("vbpg=1"))
+                    if (this.Rendering.RenderingItem.Parameters.Contains("varybyurl=1"))
                     {
                         return true;
                     }

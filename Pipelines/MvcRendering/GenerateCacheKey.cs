@@ -9,7 +9,7 @@ namespace Axiom.SitecoreCustom.Cache.Pipelines.MvcRendering
         protected override string GenerateKey(Rendering rendering, RenderRenderingArgs args)
         {
             string str = base.GenerateKey(rendering, args);
-            if (!string.IsNullOrEmpty(str) && new AxiomCachingDefinition(rendering).VaryByPage)
+            if (!string.IsNullOrEmpty(str) && new AxiomCachingDefinition(rendering).VaryByURL)
                 str = string.Format("{0}_{1}", (object)str, System.Web.HttpContext.Current.Request.Url.AbsolutePath);
             return str;
         }
